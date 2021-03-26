@@ -12,7 +12,7 @@ TRAIN_SAVE_NAME = "augmented_umls_train_pairs.txt"
 VAL_SAVE_NAME = "augmented_umls_validation_pairs.txt"
 TRAIN_SPLIT = .999
 STOP_WORDS = ["the", "a", "our", "my", "their", "your", "his", "her"]
-STOP_WORD_FREQ = .10
+STOP_WORD_FREQ = .30
 
 def process_umls_training_dataset(data_path, 
                                   train_save_name, 
