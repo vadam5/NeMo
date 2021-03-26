@@ -40,3 +40,5 @@ from nemo.collections.nlp.data.token_classification.token_classification_dataset
     BertTokenClassificationDataset,
     BertTokenClassificationInferDataset,
 )
+
+from nemo.collections.nlp.data.entity_linking.entity_linking_dataset import EntityLinkingDataset

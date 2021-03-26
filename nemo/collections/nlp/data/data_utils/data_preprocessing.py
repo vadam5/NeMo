@@ -459,7 +459,7 @@ def find_newlines(contents):
             break
 
 # Loads dataset index file if it exsits
-def load_data_indices(idx_file: str, savename: str):
+def load_data_indices(idx_file: str, data_file: str, savename: str):
     if idx_file is None:
         data_dir = data_file[: data_file.rfind('/')]
         mode = data_file[data_file.rfind('/') + 1 : data_file.rfind('.')]
