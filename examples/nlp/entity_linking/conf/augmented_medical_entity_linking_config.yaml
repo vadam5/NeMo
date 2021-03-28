@@ -2,7 +2,7 @@
   name: SelfAlignmentPretrainingForMedicalEntityLinking\ntrainer:\n  gpus: 2\n  num_nodes:\
   \ 1\n  max_epochs: 1\n  max_steps: null\n  accumulate_grad_batches: 1\n  precision:\
   \ 16\n  amp_level: O1\n  accelerator: ddp\n  gradient_clip_val: 0.0\n  log_every_n_steps:\
-  \ 1\n  val_check_interval: 2000\n  checkpoint_callback: false\n  logger: false\n\
+  \ 1\n  val_check_interval: 5000\n  checkpoint_callback: false\n  logger: false\n\
   model:\n  nemo_path: ${project_dir}/full_umls_sap_bert_model.nemo\n  max_seq_length:\
   \ 128\n  language_model:\n    pretrained_model_name: bert-base-uncased\n    config_file:\
   \ null\n    config: null\n    lm_checkpoint: null\n  tokenizer:\n    tokenizer_name:\
