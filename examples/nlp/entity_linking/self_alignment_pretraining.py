@@ -29,7 +29,7 @@ from nemo.core.config import hydra_runner
 from nemo.utils import logging
 from nemo.utils.exp_manager import exp_manager
 
-@hydra_runner(config_path="conf", config_name="medical_entity_linking_config.yaml")
+@hydra_runner(config_path="conf", config_name="augmented_medical_entity_linking_config.yaml")
 def main(cfg: DictConfig) -> None:
     logging.info(f"\nConfig Params:\n{cfg.pretty()}")
     trainer = Trainer(**cfg.trainer)

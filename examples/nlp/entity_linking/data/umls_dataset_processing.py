@@ -72,7 +72,7 @@ def process_umls_index_dataset(data_path, data_savename, id2string_savename, hea
     with open(data_savename, "w") as outfile:
         for idx, row in tqdm(df.iterrows(), total=df.shape[0]):
             # Address incorrectly formatted data
-            if type(row["STR"]) != str or "|" in  row["STR"]:
+            if type(row["STR"]) != str or "|" in row["STR"]:
                 continue
 
             cui = row["CUI"]
@@ -94,5 +94,5 @@ def process_umls_index_dataset(data_path, data_savename, id2string_savename, hea
     print("DONE!")
 
 
-process_umls_training_dataset(DATA_PATH, TRAIN_SAVE_NAME, VAL_SAVE_NAME, HEADERS, MAX_PAIRS, TRAIN_SPLIT)
-#process_umls_index_dataset(DATA_PATH, "umls_index_concepts.txt", "id_to_string.pkl", HEADERS)
+#process_umls_training_dataset(DATA_PATH, TRAIN_SAVE_NAME, VAL_SAVE_NAME, HEADERS, MAX_PAIRS, TRAIN_SPLIT)
+process_umls_index_dataset(DATA_PATH, "umls_index_concepts.txt", "id_to_string.pkl", HEADERS)
